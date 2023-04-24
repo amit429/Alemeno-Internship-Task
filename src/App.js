@@ -5,6 +5,7 @@ import { BrowserRouter } from 'react-router-dom';
 import { Route, Routes } from 'react-router-dom';
 import Landing from './Pages/Landing';
 import Job from './Pages/Job';
+import Application from './Pages/Application';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Landing/>} />
           <Route path="/job" element={<Job/>} />
+          <Route path="/application" element={<Application/>} />
         </Routes>
         </BrowserRouter>
       </ChakraProvider>

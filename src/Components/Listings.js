@@ -8,13 +8,13 @@ import {
   GridItem,
   Heading,
   Image,
-  Link,
   Stack,
   Text,
   useColorModeValue,
   SimpleGrid,
 } from "@chakra-ui/react";
 import WebFont from "webfontloader";
+import { Link } from "react-router-dom";
 import { useEffect } from "react";
 
 export default function Listings() {
@@ -31,6 +31,7 @@ export default function Listings() {
       title: "Web Designer & Developer",
       location: "San Francisco, CA",
       type: "Part Time",
+      link: '/job',
       desc: "It is a long established fact that a reader will be distracted by the readable. Lorem Ipsum looking at it layout.",
     },
     {
@@ -147,6 +148,8 @@ export default function Listings() {
                   fontSize={"sm"}
                   rounded={"full"}
                   fontFamily={"Nunito"}
+                  as={'a'}
+                  href={job.link}
                 >
                   Apply Now
                 </Button>

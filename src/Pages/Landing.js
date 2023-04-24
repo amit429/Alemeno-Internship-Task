@@ -4,6 +4,7 @@ import Header from '../Components/Header'
 import IntroPhotos from '../Components/IntroPhotos'
 import Values from '../Components/Values'
 import Listings from '../Components/Listings'
+import Footer from '../Components/Footer'
 
 export default function Landing() {
   return (
@@ -18,6 +19,7 @@ export default function Landing() {
         <IntroPhotos/>
         <Values/>
         <Listings/>
+        <Footer/>
     
     </>
   )

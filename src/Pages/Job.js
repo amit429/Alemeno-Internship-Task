@@ -2,6 +2,7 @@ import React from 'react'
 import Navbar from '../Components/Navbar'
 import Header from '../Components/Header'
 import JobDescription from '../Components/JobDescription'
+import Footer from '../Components/Footer'
 
 export default function Job() {
   return (
@@ -13,6 +14,7 @@ export default function Job() {
             button="Apply Now"
         />
         <JobDescription/>
+        <Footer/>
     
     
     </>

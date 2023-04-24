@@ -113,6 +113,8 @@ export default function JobDescription() {
                     bg={"#242331"}
                     rounded={'full'}
                     color={'white'}
+                    as={'a'}
+                    href={'/application'}
                 >
                     Apply Now
                 </Button>

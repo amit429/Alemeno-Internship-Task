@@ -5,6 +5,7 @@ import { Heading } from '@chakra-ui/react'
 import WebFont from "webfontloader";
 import { useEffect } from "react";
 import Form from '../Components/Form';
+import Footer from '../Components/Footer';
 
 export default function Application() {
     useEffect(() => {
@@ -27,6 +28,7 @@ export default function Application() {
             Job Post Application
         </Heading>
         <Form/>
+        <Footer/>
     
     </>
   )

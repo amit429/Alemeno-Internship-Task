@@ -1,4 +1,7 @@
-{
+{   "routes": {
+        "/courses/:id/like": "LIKE_COURSE"
+    },
+
     "courses": [
     {
         "id": 1,
@@ -13,6 +16,7 @@
         "prerequisites": ["Basic JavaScript knowledge", "Familiarity with React"],
         "completionPercentage" : 64 , 
         "bg" : "white" , 
+        "likes": 10,
         "completionStatus" : "Mark as Complete",
         "syllabus": [
             { "week": 1, "topic": "Introduction to React Native", "content": "Overview of React Native, setting up your development environment." },
@@ -35,6 +39,7 @@
         "location": "Online",
         "completionPercentage" : 64 , 
         "bg" : "white" , 
+        "likes": 10,
         "completionStatus" : "Mark as Complete",
         "prerequisites": ["Intermediate JavaScript knowledge", "Understanding of ES6"],
         "syllabus": [
@@ -59,6 +64,7 @@
         "location": "Online",
         "completionPercentage" : 64 , 
         "bg" : "white" , 
+        "likes": 1,
         "completionStatus" : "Mark as Complete",
         "prerequisites": ["No prior coding experience required"],
         "syllabus": [
@@ -83,6 +89,7 @@
         "location": "Online",
         "completionPercentage" : 64 , 
         "bg" : "white" , 
+        "likes": 10,
         "completionStatus" : "Mark as Complete",
         "prerequisites": ["Basic design knowledge"],
         "syllabus": [

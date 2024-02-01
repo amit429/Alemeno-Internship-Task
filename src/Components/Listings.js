@@ -1,17 +1,12 @@
 import React from "react";
 import {
-  Badge,
   Button,
   Center,
-  Flex,
-  Grid,
-  GridItem,
   Heading,
-  Image,
   Stack,
   Text,
-  useColorModeValue,
   SimpleGrid,
+  Input,
 } from "@chakra-ui/react";
 import WebFont from "webfontloader";
 import { Link } from "react-router-dom";
@@ -20,6 +15,7 @@ import { useEffect , useState } from "react";
 export default function Listings() {
 
   const [courses, setCourses] = useState([]);
+  const [searchTerm, setSearchTerm] = useState("");
 
   const getCourses = async () => {
     const response = await fetch("http://localhost:3030/courses");
@@ -27,6 +23,12 @@ export default function Listings() {
     console.log(data);
     setCourses(data);
   };
+
+  const filteredCourses = courses.filter(
+    (course) =>
+      course.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      course.instructor.toLowerCase().includes(searchTerm.toLowerCase())
+  );
 
   useEffect(() => {
     getCourses();
@@ -52,6 +54,25 @@ export default function Listings() {
       </Heading>
       <Center
         style={{
+          marginTop: "20px",
+          fontFamily: "Nunito",
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          width: "50%",
+          margin: "auto",
+        }}
+        py={6}
+      >
+        <Input
+          type="text"
+          placeholder="Search by course or instructor name"
+          value={searchTerm}
+          onChange={(e) => setSearchTerm(e.target.value)}
+        />
+      </Center>
+      <Center
+        style={{
           marginTop: "120px",
           marginBottom: "100px",
           fontFamily: "Nunito",
@@ -64,8 +85,8 @@ export default function Listings() {
         }}
         py={6}
       >
-        <SimpleGrid columns={{ base: 1, md: 3 }} spacing={3}>
-          {courses.map((course) => (
+        <SimpleGrid columns={{ base: 1, md: 1 , lg: 2 , xl: 3 }} spacing={3}>
+          {filteredCourses.map((course) => (
             <Stack
               borderWidth="1px"
               borderRadius="2xl"

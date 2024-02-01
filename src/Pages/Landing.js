@@ -11,13 +11,13 @@ export default function Landing() {
     <>
         <Navbar/>
         <Header
-          title="Careers"
+          title="Courses for your Development"
           description="Lorem ipsum dolor sit amet consectetur adipiscing elit 
           nterdum ullamcorper sed pharetra sene."
           button="Browse Open Positions"
         />
         <IntroPhotos/>
-        <Values/>
+        {/* <Values/> */}
         <Listings/>
         <Footer/>
     

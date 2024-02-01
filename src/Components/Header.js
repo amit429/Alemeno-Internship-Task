@@ -35,12 +35,12 @@ export default function Header(props) {
           py={{ base: 20, md: 20 }}>
           <Heading
             fontWeight={800}
-            fontSize={{ base: '45px', sm: '4xl', md: '75px' }}
+            fontSize={{ base: '45px', sm: '4xl', md: '65px' }}
             fontFamily={'Nunito'}
             >
                 {props.title}
           </Heading>
-          <Text
+          {/* <Text
             
             fontFamily={'Nunito'}
             fontSize={{ base: 'md', md: '25px' }}
@@ -70,7 +70,7 @@ export default function Header(props) {
             >
                {props.button}
             </Button>
-          </Stack>
+          </Stack> */}
         </Stack>
       </Container>
     

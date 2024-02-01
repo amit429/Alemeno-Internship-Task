@@ -1,41 +1,59 @@
-import React from "react";
-import {
-  Badge,
-  Button,
-  Center,
-  Flex,
-  Grid,
-  GridItem,
-  Heading,
-  Image,
+import React, { useEffect } from 'react'
+import { Heading ,
+  SimpleGrid,
   Stack,
   Text,
-  useColorModeValue,
-  SimpleGrid,
+  Button,
+  Center,
+  Progress
 } from "@chakra-ui/react";
-import WebFont from "webfontloader";
-import { Link } from "react-router-dom";
-import { useEffect , useState } from "react";
+import { useState } from 'react';
 
-export default function Listings() {
-
+export default function Dashboard() {
   const [courses, setCourses] = useState([]);
+  const [enrolledCourses, setEnrolledCourses] = useState([]);
+  const [studentName, setStudentName] = useState('');
+  const [completeStatus, setCompleteStatus] = useState("Mark as Complete");
+  const [progress, setProgress] = useState(64);
+  const [bg , setBg] = useState("white");
 
   const getCourses = async () => {
     const response = await fetch("http://localhost:3030/courses");
     const data = await response.json();
     console.log(data);
     setCourses(data);
+  }
+
+  const getEnrolledCourses = async () => {
+     const data = courses.flatMap(course => 
+      course.students.some(student => student.id === 101) ? [course] : []
+    );
+    setEnrolledCourses(data);
+    console.log(data);
+    const student = courses.flatMap(course =>
+      course.students.find(student => student.id === 101)
+    )[0];
+    setStudentName(student.name);
+  }
+
+  const handleCompleteStatus = (courseId) => {
+    setEnrolledCourses(prevCourses =>
+      prevCourses.map(course =>
+        course.id === courseId
+          ? { ...course, completeStatus: "Completed", progress: 100, bg: "green" }
+          : course
+      )
+    );
   };
 
   useEffect(() => {
     getCourses();
-    WebFont.load({
-      google: {
-        families: ["Nunito:300,400,700,800"],
-      },
-    });
+    getEnrolledCourses();
   }, []);
+
+  useEffect(() => {
+    getEnrolledCourses();
+  }, [courses]); 
 
   return (
     <>
@@ -47,10 +65,19 @@ export default function Listings() {
         fontSize={"4xl"}
         fontFamily={"Nunito"}
         mb={4}
-      >
-        Browse through our courses
-      </Heading>
-      <Center
+      >Dashboard</Heading>
+      {enrolledCourses.length > 0 ? (
+        <>
+        <Heading
+          style={{
+            marginTop: "30px",
+          }}
+          textAlign={"center"}
+          fontSize={"4xl"}
+          fontFamily={"Nunito"}
+          mb={4}
+        >Hello {studentName}, Here are your Enrolled Courses</Heading>
+        <Center
         style={{
           marginTop: "120px",
           marginBottom: "100px",
@@ -64,8 +91,8 @@ export default function Listings() {
         }}
         py={6}
       >
-        <SimpleGrid columns={{ base: 1, md: 3 }} spacing={3}>
-          {courses.map((course) => (
+        <SimpleGrid columns={{ base: 1, md: 1 , lg: 2 , xl: 3 }} spacing={10}>
+          {enrolledCourses.map((course) => (
             <Stack
               borderWidth="1px"
               borderRadius="2xl"
@@ -108,33 +135,47 @@ export default function Listings() {
                   color={"gray.500"}
                   style={{
                     fontSize: "16px",
-                    marginBottom: "40px",
+                    marginBottom: "30px",
                     marginTop: "20px",
                   }}
                 >
-                  {course.description}
+                  Due Date : 27th June 2024
                 </Text>
-
+                <Progress hasStripe value={course.progress || progress} style={{
+                  marginBottom: "10px",
+                }}/>
                 <Button
-                  w={"30%"}
+                  w={"50%"}
                   h={"40px"}
-                  bg={"white"}
+                  bg={course.bg || bg}
                   border={"1px"}
                   fontSize={"sm"}
                   rounded={"full"}
                   fontFamily={"Nunito"}
                   as={'a'}
                   onClick={()=>{
-                    window.location.href = `/course/${course.id}`
+                    handleCompleteStatus(course.id)
                   }}
                 >
-                  Enroll Now
+                  {course.completeStatus || "Mark as Complete"}
                 </Button>
               </Stack>
             </Stack>
           ))}
         </SimpleGrid>
-      </Center>
+        </Center>
+        </>
+      ) : (
+        <Heading
+          style={{
+            marginTop: "30px",
+          }}
+          textAlign={"center"}
+          fontSize={"4xl"}
+          fontFamily={"Nunito"}
+          mb={4}
+        >No Enrolled Courses</Heading>
+      )}
     </>
-  );
+  )
 }

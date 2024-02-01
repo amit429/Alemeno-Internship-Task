@@ -1,6 +1,6 @@
 import React from 'react'
-import { chakra, Box, Flex, useColorModeValue, HStack, Button, VisuallyHidden, IconButton, VStack, CloseButton, useDisclosure } from '@chakra-ui/react';
-import { AiOutlineMenu } from 'react-icons/ai';
+import { chakra, Box, Flex, useColorModeValue, HStack, Button, VisuallyHidden, IconButton, VStack, CloseButton, useDisclosure , Avatar } from '@chakra-ui/react';
+import { AiOutlineMenu , AiOutlineUser } from 'react-icons/ai';
 import { Link } from 'react-router-dom';
 
 export default function Navbar() {
@@ -13,25 +13,9 @@ export default function Navbar() {
         link: '/'
       },
       {
-        label: "About",
-        link: '/about'
+        label: "Dashboard",
+        link: '/dashboard'
       },
-      {
-        label: 'Features',
-        link: '/features'
-      },
-      {
-        label: 'Pages',
-        link: '/pages'
-      },
-      {
-        label: 'Blog',
-        link: '/blog'
-      },
-      {
-        label: 'Contact',
-        link: '/contact'
-      }
     ]
   return (
     <>
@@ -47,7 +31,7 @@ export default function Navbar() {
         <Flex alignItems="center" justifyContent="space-between" mx="auto">
           <Flex>
             <chakra.h1 fontSize="xl" fontWeight="medium" ml="2">
-              XeroCodee
+              Alemeno
             </chakra.h1>
           </Flex>
           <HStack display="flex" alignItems="center" spacing={1}>
@@ -81,17 +65,8 @@ export default function Navbar() {
                     </Button>
                ))}
              </Box>
-              <Button style={{
-                    backgroundColor: "#0C5BC6",
-                    color: "white",
-                    width: "136px",
-                    height: "55px",
-                    borderRadius: "38px",
-              }}>Sign in</Button>
+             <Avatar bg='red.500' icon={<AiOutlineUser fontSize='1.5rem' />} />
             </HStack>
-            <Button colorScheme="brand" size="sm">
-              Get Started
-            </Button>
             <Box
               display={{
                 base: "inline-flex",
@@ -146,15 +121,11 @@ export default function Navbar() {
                     {item.label}
                   </Button>
                 ))}
-                <Button style={{
-                    backgroundColor: "#0C5BC6",
-                    color: "white",
-                    width: "136px",
-                    height: "55px",
-                    borderRadius: "38px",
-              }}     w="full" colorScheme='blue'>
-                  Sign in
-                </Button>
+                <Avatar
+                  size={"md"}
+                  src={"https://avatars.githubusercontent.com/u/81866624?v=4"}
+                  alt={"Author"}
+                />
               </VStack>
             </Box>
           </HStack>

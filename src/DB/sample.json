@@ -1,0 +1,219 @@
+{
+    "courses": [
+    {
+        "id": 1,
+        "name": "Introduction to React Native",
+        "instructor": "John Doe",
+        "description": "Learn the basics of React Native development and build your first mobile app.",
+        "enrollmentStatus": "Open",
+        "thumbnail": "your.image.here",
+        "duration": "8 weeks",
+        "schedule": "Tuesdays and Thursdays, 6:00 PM - 8:00 PM",
+        "location": "Online",
+        "prerequisites": ["Basic JavaScript knowledge", "Familiarity with React"],
+        "completionPercentage" : 64 , 
+        "bg" : "white" , 
+        "completionStatus" : "Mark as Complete",
+        "syllabus": [
+            { "week": 1, "topic": "Introduction to React Native", "content": "Overview of React Native, setting up your development environment." },
+            { "week": 2, "topic": "Building Your First App", "content": "Creating a simple mobile app using React Native components." }
+        ],
+        "students": [
+            { "id": 101, "name": "Alice Johnson", "email": "alice@example.com" },
+            { "id": 102, "name": "Bob Smith", "email": "bob@example.com" }
+        ]
+    },
+    {
+        "id": 2,
+        "name": "Advanced JavaScript Concepts",
+        "instructor": "Jane Doe",
+        "description": "Deep dive into advanced JavaScript concepts and best practices.",
+        "enrollmentStatus": "Open",
+        "thumbnail": "your.image.here",
+        "duration": "10 weeks",
+        "schedule": "Mondays and Wednesdays, 7:00 PM - 9:00 PM",
+        "location": "Online",
+        "completionPercentage" : 64 , 
+        "bg" : "white" , 
+        "completionStatus" : "Mark as Complete",
+        "prerequisites": ["Intermediate JavaScript knowledge", "Understanding of ES6"],
+        "syllabus": [
+            { "week": 1, "topic": "Closures and Scope", "content": "Understanding closures and lexical scoping in JavaScript." },
+            { "week": 2, "topic": "Asynchronous JavaScript", "content": "Exploring asynchronous programming with callbacks, promises, and async/await." }
+        ],
+        "students": [
+            { "id": 101, "name": "Alice Johnson", "email": "alice@example.com" },
+            { "id": 201, "name": "Charlie Brown", "email": "charlie@example.com" },
+            { "id": 202, "name": "Diana Martinez", "email": "diana@example.com" }
+        ]
+    },
+    {
+        "id": 3,
+        "name": "Web Development Bootcamp",
+        "instructor": "Sarah Johnson",
+        "description": "Comprehensive training on web development with HTML, CSS, and JavaScript.",
+        "enrollmentStatus": "Open",
+        "thumbnail": "your.image.here",
+        "duration": "10 weeks",
+        "schedule": "Mondays and Fridays, 6:30 PM - 8:30 PM",
+        "location": "Online",
+        "completionPercentage" : 64 , 
+        "bg" : "white" , 
+        "completionStatus" : "Mark as Complete",
+        "prerequisites": ["No prior coding experience required"],
+        "syllabus": [
+            { "week": 1, "topic": "HTML Fundamentals", "content": "Introduction to HTML and web page structure." },
+            { "week": 2, "topic": "CSS Styling", "content": "Styling web pages with CSS." }
+        ],
+        "students": [
+            { "id": 101, "name": "Alice Johnson", "email": "alice@example.com" },
+            { "id": 301, "name": "Grace Turner", "email": "grace@example.com" },
+            { "id": 302, "name": "Henry Rodriguez", "email": "henry@example.com" }
+        ]
+    },
+    {
+        "id": 4,
+        "name": "Mobile App Design Workshop",
+        "instructor": "Alex Smith",
+        "description": "Hands-on workshop on designing user-friendly mobile applications.",
+        "enrollmentStatus": "In Progress",
+        "thumbnail": "your.image.here",
+        "duration": "6 weeks",
+        "schedule": "Wednesdays, 5:00 PM - 7:00 PM",
+        "location": "Online",
+        "completionPercentage" : 64 , 
+        "bg" : "white" , 
+        "completionStatus" : "Mark as Complete",
+        "prerequisites": ["Basic design knowledge"],
+        "syllabus": [
+            { "week": 1, "topic": "Principles of Mobile Design", "content": "Understanding key principles for designing mobile apps." },
+            { "week": 2, "topic": "User Interface (UI) Design", "content": "Creating effective and visually appealing UI for mobile apps." }
+        ],
+        "students": [
+            { "id": 101, "name": "Alice Johnson", "email": "alice@example.com" },
+            { "id": 401, "name": "Isaac Brown", "email": "isaac@example.com" },
+            { "id": 402, "name": "Jessica Taylor", "email": "jessica@example.com" }
+        ]
+    },
+    {
+        "id": 5,
+        "name": "Python for Data Science",
+        "instructor": "Michael White",
+        "description": "Learn Python programming for data analysis and machine learning.",
+        "enrollmentStatus": "Open",
+        "thumbnail": "your.image.here",
+        "duration": "8 weeks",
+        "schedule": "Tuesdays and Thursdays, 7:00 PM - 9:00 PM",
+        "location": "Online",
+        "prerequisites": ["Basic programming knowledge"],
+        "syllabus": [
+            { "week": 1, "topic": "Python Basics", "content": "Introduction to Python syntax and basic programming concepts." },
+            { "week": 2, "topic": "Data Manipulation with Pandas", "content": "Working with data using the Pandas library." }
+        ],
+        "students": [
+            { "id": 501, "name": "Olivia Smith", "email": "olivia@example.com" },
+            { "id": 502, "name": "Peter Johnson", "email": "peter@example.com" }
+        ]
+    },
+    {
+        "id": 6,
+        "name": "Cybersecurity Fundamentals",
+        "instructor": "David Miller",
+        "description": "Explore the basics of cybersecurity and best practices for securing systems.",
+        "enrollmentStatus": "Open",
+        "thumbnail": "your.image.here",
+        "duration": "12 weeks",
+        "schedule": "Wednesdays and Fridays, 6:30 PM - 8:30 PM",
+        "location": "Online",
+        "prerequisites": ["Basic computer knowledge"],
+        "syllabus": [
+            { "week": 1, "topic": "Introduction to Cybersecurity", "content": "Overview of cybersecurity principles and common threats." },
+            { "week": 2, "topic": "Network Security", "content": "Securing computer networks and communication." }
+        ],
+        "students": [
+            { "id": 601, "name": "Sophia Davis", "email": "sophia@example.com"},
+            { "id": 602, "name": "Liam Wilson", "email": "liam@example.com" }
+        ]
+    },
+    {
+        "id": 7,
+        "name": "Frontend Web Development",
+        "instructor": "Emma Taylor",
+        "description": "Learn the essentials of frontend web development with HTML, CSS, and JavaScript.",
+        "enrollmentStatus": "In Progress",
+        "thumbnail": "your.image.here",
+        "duration": "10 weeks",
+        "schedule": "Mondays and Thursdays, 7:00 PM - 9:00 PM",
+        "location": "Online",
+        "prerequisites": ["Basic understanding of HTML and CSS"],
+        "syllabus": [
+            { "week": 1, "topic": "HTML5 and CSS3", "content": "Introduction to the latest HTML and CSS standards." },
+            { "week": 2, "topic": "JavaScript Fundamentals", "content": "Understanding the basics of JavaScript programming." }
+        ],
+        "students": [
+            { "id": 701, "name": "Noah Brown", "email": "noah@example.com" },
+            { "id": 702, "name": "Ava Wilson", "email": "ava@example.com" }
+        ]
+    },
+    {
+        "id": 8,
+        "name": "AI and Machine Learning",
+        "instructor": "Daniel Martinez",
+        "description": "Explore the world of artificial intelligence and machine learning.",
+        "enrollmentStatus": "Open",
+        "thumbnail": "your.image.here",
+        "duration": "12 weeks",
+        "schedule": "Tuesdays and Fridays, 6:00 PM - 8:00 PM",
+        "location": "Online",
+        "prerequisites": ["Basic understanding of programming"],
+        "syllabus": [
+            { "week": 1, "topic": "Introduction to AI", "content": "Overview of artificial intelligence and its applications." },
+            { "week": 2, "topic": "Supervised Learning", "content": "Understanding supervised learning algorithms." }
+        ],
+        "students": [
+            { "id": 801, "name": "Mia Johnson", "email": "mia@example.com" },
+            { "id": 802, "name": "Jackson Davis", "email": "jackson@example.com" }
+        ]
+    },
+    {
+        "id": 9,
+        "name": "Cloud Computing Essentials",
+        "instructor": "Ava Smith",
+        "description": "Learn the fundamentals of cloud computing and popular cloud platforms.",
+        "enrollmentStatus": "In Progress",
+        "thumbnail": "your.image.here",
+        "duration": "8 weeks",
+        "schedule": "Wednesdays and Saturdays, 5:30 PM - 7:30 PM",
+        "location": "Online",
+        "prerequisites": ["Basic knowledge of computer networks"],
+        "syllabus": [
+            { "week": 1, "topic": "Introduction to Cloud Computing", "content": "Overview of cloud computing and its advantages." },
+            { "week": 2, "topic": "Cloud Service Models", "content": "Understanding IaaS, PaaS, and SaaS." }
+        ],
+        "students": [
+            { "id": 901, "name": "Ethan Turner", "email": "ethan@example.com" },
+            { "id": 902, "name": "Scarlett Wilson", "email": "scarlett@example.com" }
+        ]
+    },
+    {
+        "id": 10,
+        "name": "UX/UI Design Principles",
+        "instructor": "James Brown",
+        "description": "Master the principles of user experience (UX) and user interface (UI) design.",
+        "enrollmentStatus": "Open",
+        "thumbnail": "your.image.here",
+        "duration": "10 weeks",
+        "schedule": "Thursdays and Sundays, 6:30 PM - 8:30 PM",
+        "location": "Online",
+        "prerequisites": ["Basic design knowledge"],
+        "syllabus": [
+            { "week": 1, "topic": "Introduction to UX/UI Design", "content": "Overview of UX/UI principles and design thinking." },
+            { "week": 2, "topic": "Wireframing and Prototyping", "content": "Creating wireframes and interactive prototypes." }
+        ],
+        "students": [
+            { "id": 1001, "name": "Aiden Martinez", "email": "aiden@example.com" },
+            { "id": 1002, "name": "Chloe Taylor", "email": "chloe@example.com" }
+        ]
+    }
+]
+}

@@ -67,76 +67,6 @@ export default function Footer() {
         color={useColorModeValue("gray.700", "gray.200")}
         mt={10}
       >
-        <Container as={Stack} maxW={"6xl"} py={10}>
-          <SimpleGrid columns={{ base: 1, sm: 2, md: 4 }} spacing={8}>
-            <Stack align={"flex-start"}>
-              <ListHeader>XeroCodee</ListHeader>
-              <Text href={"#"}>
-                You get just what you need to run your cloud workloads--no more,
-                no less. Deploy from our single pane of glass, manage them with
-                ease and scale up as fast as your workload grows . . .
-              </Text>
-              <Link href="#">
-                📧 hello@xerocodee.com
-                <br />
-                xerocodee@gmail.com
-              </Link>
-              <Link href="#">📱+91 9667475014</Link>
-            </Stack>
-
-            <Stack align={"center"}>
-              <ListHeader>Pages</ListHeader>
-              <Link href={"#"}>Home</Link>
-              <Link href={"#"}>About Us</Link>
-              <Link href={"#"}>Integrations</Link>
-              <Link href={"#"}>Pricing</Link>
-              <Link href={"#"}>Features</Link>
-              <Link href={"#"}>Contact Us</Link>
-            </Stack>
-
-            <Stack align={"flex-start"}>
-              <ListHeader>Utility Pages</ListHeader>
-              <Link href={"#"}>Password</Link>
-              <Link href={"#"}>Protected</Link>
-              <Link href={"#"}>404 Not Found</Link>
-              <Link href={"#"}>Style Guide</Link>
-              <Link href={"#"}>Licenses</Link>
-              <Link href={"#"}>Changelog</Link>
-            </Stack>
-
-            <Stack align={"flex-start"}>
-              <ListHeader>Infrastructure Automation & Compliance</ListHeader>
-              <Text>
-                With a few clicks, you can integrate your preferred DevOps tools
-                to enable Single Pane of Glass DevOps
-              </Text>
-              <Stack style={{
-                marginTop: '40px'
-              }} direction="row" spacing={4} align="center">
-                <Button 
-                    p={{base: '10px', md: '20px'}}
-                    w={{base: 'xs' , md: '150px'}}
-                    h={{base: 'xs' , md: '50px'}}
-                    bg={"#242331"}
-                    rounded={"full"}
-                    color={"white"}
-                >
-                  App Store
-                </Button>
-                <Button
-                     p={{base: '10px', md: '20px'}}
-                     w={{base: 'xs' , md: '150px'}}
-                     h={{base: 'xs' , md: '50px'}}
-                     bg={"#242331"}
-                     rounded={"full"}
-                     color={"white"} 
-                >
-                  Play Store
-                </Button>
-              </Stack>
-            </Stack>
-          </SimpleGrid>
-        </Container>
 
         <Box
           borderTopWidth={1}
@@ -152,7 +82,7 @@ export default function Footer() {
             justify={{ md: "space-between" }}
             align={{ md: "center" }}
           >
-            <Text>Copyright © XeroCodee | Designed by Arya Soni</Text>
+            <Text>Copyright © Alemeno | Designed by Alemeno</Text>
             <Stack direction={"row"} spacing={6}>
               <SocialButton label={"Twitter"} href={"#"}>
                 <FaTwitter />
